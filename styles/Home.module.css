@@ -1,0 +1,36 @@
+.container {
+  display: grid;
+  width: 90%;
+  grid-template-columns: repeat(3, auto);
+  margin: 2% auto;
+  gap: 20px;
+  row-gap: 50px;
+}
+@media (min-width: 2000px) {
+  .container {
+    grid-template-columns: repeat(4, auto);
+    width: 80%;
+  }
+}
+@media (max-width: 768px) and (min-width: 500px) {
+  .container {
+    grid-template-columns: repeat(2, auto);
+  }
+}
+@media (max-width: 500px) {
+  .container {
+    grid-template-columns: auto;
+  }
+}
+
+.Card {
+  transition: ease-in-out 0.3s;
+}
+.Card:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+  box-shadow: 0 0 50px 15px white;
+}
+.Card:active {
+  transform: scale(0.9);
+}/*# sourceMappingURL=Home.module.css.map */

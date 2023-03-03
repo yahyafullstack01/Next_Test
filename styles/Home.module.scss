@@ -1,0 +1,39 @@
+@import "./mixins";
+
+// The media query with Sass
+.container {
+    display: grid;
+    width: 90%;
+    grid-template-columns: repeat(3, auto);
+    margin: 2% auto;
+    gap: 20px;
+    row-gap: 50px;
+
+    @include BigScreen {
+        grid-template-columns: repeat(4, auto);
+        width: 80%;
+    }
+
+    @include Tablet {
+        grid-template-columns: repeat(2, auto);
+    }
+
+    @include Mobile {
+        grid-template-columns: auto;
+    }
+}
+
+// Hover and click effects on the Card 
+.Card {
+    transition: ease-in-out 0.3s;
+    &:hover {
+        cursor: pointer;
+        transform: scale(1.1);
+        box-shadow: 0 0  50px 15px white;
+       
+    }
+
+    &:active{
+        transform: scale(0.9);
+    }
+}
